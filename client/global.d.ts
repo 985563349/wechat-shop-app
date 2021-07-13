@@ -12,7 +12,8 @@ declare module '*.styl';
 // @ts-ignore
 declare const process: {
   env: {
-    TARO_ENV: 'weapp' | 'swan' | 'alipay' | 'h5' | 'rn' | 'tt' | 'quickapp' | 'qq' | 'jd';
+    TARO_ENV: 'weapp';
+    NODE_ENV: 'development' | 'testing' | 'production';
     [key: string]: any;
   };
 };
