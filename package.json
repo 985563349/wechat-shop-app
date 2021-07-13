@@ -1,0 +1,22 @@
+{
+  "name": "wechat-cloud-app",
+  "version": "1.0.1",
+  "main": "index.js",
+  "author": "Jie <jie985563349@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint-staged": "npm run lint-staged --prefix client",
+    "prepare": "husky install",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
+  },
+  "private": true,
+  "workspaces": [
+    "client"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "conventional-changelog-cli": "^2.1.1",
+    "husky": "^7.0.1"
+  }
+}

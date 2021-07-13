@@ -1,0 +1,30 @@
+.title {
+  font-size: 34px;
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+.form {
+  display: block;
+  font-size: 30px;
+  margin: 0 20px;
+
+  &-item {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+
+    &__label {
+      display: block;
+      width: 140px;
+      padding: 0 10px;
+      text-align: right;
+    }
+  }
+
+  .input {
+    flex: 1;
+    border: 1px solid #e3e3e3;
+    padding: 6px 12px;
+  }
+}
