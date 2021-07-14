@@ -13,9 +13,7 @@ const Component: React.FC = () => {
         <Button type='success' loading>
           Success
         </Button>
-        <Button type='warning' disabled>
-          Warning
-        </Button>
+        <Button type='warning'>Warning</Button>
       </View>
 
       <View>

@@ -1,3 +1,8 @@
+.c-icon-loading {
+  margin-right: 4px;
+  animation: turn 1s linear infinite;
+}
+
 @keyframes turn {
   0% {
     transform: rotate(0);

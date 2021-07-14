@@ -4,8 +4,8 @@ import classNames from 'classnames';
 import './index.scss';
 
 export interface IconProps {
-  className?: string;
   icon: string;
+  className?: string;
   size?: string | number;
   color?: string;
 }
