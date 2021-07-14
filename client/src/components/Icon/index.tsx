@@ -5,21 +5,23 @@ import './index.scss';
 
 export interface IconProps {
   icon: string;
+  className?: string;
   size?: string | number;
   color?: string;
 }
 
 const Icon: React.FC<IconProps> = (props) => {
-  const { icon, size, color } = props;
+  const { className, icon, size, color } = props;
 
   const classes = classNames('c-icon', [
     {
       [`c-icon-${icon}`]: icon,
     },
+    className,
   ]);
 
   const styles = {
-    fontSize: `${size}px`,
+    fontSize: size ? `${size}px` : '',
     color,
   };
 
