@@ -11,6 +11,7 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
+  plugins: [],
   defineConstants: {},
   alias: {
     '@/components': path.resolve(__dirname, '../src/components'),

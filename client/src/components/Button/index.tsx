@@ -20,22 +20,28 @@ export interface ButtonProps extends Omit<NativeButtonProps, 'size' | 'type'> {
   size?: ButtonSize;
   block?: boolean;
   full?: boolean;
+  icon?: React.ReactNode;
 }
 
 const prefixCls = 'c-button';
 
 const Button: React.FC<ButtonProps> = (props) => {
-  const { children, type, size, block, full, ...fieldProps } = props;
+  const { children, type, size, block, full, icon, disabled, loading, ...fieldProps } = props;
 
   const classes = classNames(prefixCls, {
     [`${prefixCls}--${size}`]: size,
     [`${prefixCls}--${type}`]: type,
     [`${prefixCls}--block`]: block,
     [`${prefixCls}--full`]: full,
+    [`${prefixCls}--loading`]: loading,
+    [`${prefixCls}--disabled`]: disabled,
   });
 
+  const iconNode = icon && !loading ? icon : loading ? 'loading... ' : null;
+
   return (
-    <NativeButton className={classes} {...fieldProps}>
+    <NativeButton className={classes} disabled={disabled || loading} {...fieldProps}>
+      {iconNode}
       {children}
     </NativeButton>
   );

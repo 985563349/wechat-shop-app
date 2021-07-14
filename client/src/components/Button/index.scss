@@ -13,8 +13,32 @@
   color: #fff;
   box-shadow: none;
 
+  &[disabled] {
+    color: #fff;
+  }
+
   &::after {
     border: none;
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
+
+  &--disabled {
+    opacity: 0.4;
+  }
+
+  &--disabled:active {
+    opacity: 0.4;
+  }
+
+  &--loading {
+    cursor: default;
+  }
+
+  &--loading:active {
+    opacity: 1;
   }
 
   &--block {
