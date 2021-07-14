@@ -1,17 +1,24 @@
 /* postcss-pxtransform disable */
 @import '../styles/variable.scss';
+@import '../styles//animation.scss';
 
 .c-button {
   display: inline-block;
   margin: 4px 2px;
   border-radius: 10px;
   border: none;
-  padding: 16px;
-  line-height: 1;
+  padding: 0 16px;
+  height: 44px;
+  line-height: 44px;
   font-size: $size-font-base;
   background-color: $primary-color;
   color: #fff;
   box-shadow: none;
+
+  &__icon--loading {
+    margin-right: 4px;
+    animation: turn 1s linear infinite;
+  }
 
   &[disabled] {
     color: #fff;
@@ -52,13 +59,13 @@
 
   &--small {
     font-size: $size-font-small;
-    padding: 8px 12px;
+    padding: 0 12px;
     border-radius: 6px;
   }
 
   &--large {
     font-size: $size-font-large;
-    padding: 18px 20px;
+    padding: 0 20px;
     border-radius: 6px;
   }
 
