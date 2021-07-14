@@ -1,0 +1,77 @@
+@import '../styles/variable.scss';
+
+.c-button {
+  display: inline-block;
+  margin: 4px 2px;
+  border-radius: 10px;
+  border: none;
+  padding: 16px;
+  line-height: 1;
+  font-size: $size-font-base;
+  background-color: $primary-color;
+  color: #fff;
+  box-shadow: none;
+
+  &::after {
+    border: none;
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--full {
+    display: block;
+    border-radius: 0;
+  }
+
+  &--small {
+    font-size: $size-font-small;
+    padding: 8px 12px;
+    border-radius: 6px;
+  }
+
+  &--large {
+    font-size: $size-font-large;
+    padding: 18px 20px;
+    border-radius: 6px;
+  }
+
+  &--primary {
+    background-color: $primary-color;
+  }
+
+  &--secondary {
+    background-color: $secondary-color;
+  }
+
+  &--tertiary {
+    background-color: $tertiary-color;
+  }
+
+  &--success {
+    background-color: $success-color;
+  }
+
+  &--warning {
+    color: #000;
+    background-color: $warning-color;
+  }
+
+  &--danger {
+    background-color: $danger-color;
+  }
+
+  &--dark {
+    background-color: $dark-color;
+  }
+
+  &--medium {
+    background-color: $medium-color;
+  }
+
+  &--light {
+    color: #000;
+    background-color: $light-color;
+  }
+}
