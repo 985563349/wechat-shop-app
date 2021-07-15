@@ -6,40 +6,55 @@
   margin: 4px 2px;
   border-radius: 10px;
   border: none;
-  padding: 0 16px;
-  height: 44px;
-  line-height: 44px;
-  font-size: $size-font-base;
+  padding: 15px;
+  line-height: 0;
   box-shadow: none;
+  font-size: $size-font-base;
   color: #fff;
   background-color: $primary-color;
 
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  [class*='c-icon'] + &__text,
+  [class*='c-loading'] + &__text {
+    margin-left: 8px;
+  }
+
   &[disabled] {
-    color: #fff;
+    pointer-events: none;
   }
 
   &::after {
+    display: none;
     border: none;
   }
 
   &:active {
-    opacity: 0.9;
+    opacity: 0.8;
+  }
+
+  &--small {
+    padding: 8px;
+    border-radius: 6px;
+    font-size: $size-font-small;
+  }
+
+  &--large {
+    padding: 18px;
+    border-radius: 12px;
+    font-size: $size-font-large;
   }
 
   &--disabled {
-    opacity: 0.4;
-  }
-
-  &--disabled:active {
-    opacity: 0.4;
+    opacity: 0.6;
   }
 
   &--loading {
-    cursor: default;
-  }
-
-  &--loading:active {
-    opacity: 1;
+    opacity: 0.6;
   }
 
   &--block {
@@ -51,20 +66,8 @@
     border-radius: 0;
   }
 
-  &--small {
-    padding: 0 11px;
-    border-radius: 6px;
-    height: 28px;
-    line-height: 28px;
-    font-size: $size-font-small;
-  }
-
-  &--large {
-    padding: 0 20px;
-    border-radius: 12px;
-    height: 56px;
-    line-height: 56px;
-    font-size: $size-font-large;
+  &--circle {
+    border-radius: 30px;
   }
 
   &--primary {
@@ -86,10 +89,6 @@
   &--warning {
     color: $dark-color;
     background-color: $warning-color;
-
-    &[disabled] {
-      color: $dark-color;
-    }
   }
 
   &--danger {
@@ -107,9 +106,5 @@
   &--light {
     color: $dark-color;
     background-color: $light-color;
-
-    &[disabled] {
-      color: $dark-color;
-    }
   }
 }
