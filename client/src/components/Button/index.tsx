@@ -2,7 +2,7 @@ import { Button as NativeButton } from '@tarojs/components';
 import type { ButtonProps as NativeButtonProps } from '@tarojs/components';
 import classNames from 'classnames';
 
-import IconLoading from '../IconLoading';
+import Loading from '../Loading';
 
 import './index.scss';
 
@@ -39,7 +39,7 @@ const Button: React.FC<ButtonProps> = (props) => {
     [`${prefixCls}--disabled`]: disabled,
   });
 
-  const iconNode = icon && !loading ? icon : loading ? <IconLoading /> : null;
+  const iconNode = icon && !loading ? icon : loading ? <Loading /> : null;
 
   return (
     <NativeButton className={classes} disabled={disabled || loading} {...fieldProps}>

@@ -34,6 +34,11 @@ const Component: React.FC = () => {
         </View>
 
         <View className='section-item'>
+          <View className='sub-title'>Loading</View>
+          <Button loading>Loading</Button>
+        </View>
+
+        <View className='section-item'>
           <View className='sub-title'>按钮尺寸</View>
           <Button size='small'>small</Button>
           <Button>Default</Button>
