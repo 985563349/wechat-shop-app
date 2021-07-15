@@ -5,8 +5,8 @@
   display: inline-block;
   margin: 4px 2px;
   border-radius: 10px;
-  border: none;
-  padding: 15px;
+  border: 1px solid $primary-color;
+  padding: 14px;
   line-height: 0;
   box-shadow: none;
   font-size: $size-font-base;
@@ -38,15 +38,62 @@
   }
 
   &--small {
-    padding: 8px;
+    padding: 7px;
     border-radius: 6px;
     font-size: $size-font-small;
   }
 
   &--large {
-    padding: 18px;
+    padding: 17px;
     border-radius: 12px;
     font-size: $size-font-large;
+  }
+
+  &--primary {
+    border-color: $primary-color;
+    background-color: $primary-color;
+  }
+
+  &--secondary {
+    border-color: $secondary-color;
+    background-color: $secondary-color;
+  }
+
+  &--tertiary {
+    border-color: $tertiary-color;
+    background-color: $tertiary-color;
+  }
+
+  &--success {
+    border-color: $success-color;
+    background-color: $success-color;
+  }
+
+  &--warning {
+    color: $dark-color;
+    border-color: $warning-color;
+    background-color: $warning-color;
+  }
+
+  &--danger {
+    border-color: $danger-color;
+    background-color: $danger-color;
+  }
+
+  &--dark {
+    border-color: $dark-color;
+    background-color: $dark-color;
+  }
+
+  &--medium {
+    border-color: $medium-color;
+    background-color: $medium-color;
+  }
+
+  &--light {
+    color: $dark-color;
+    border-color: $light-color;
+    background-color: $light-color;
   }
 
   &--disabled {
@@ -70,41 +117,47 @@
     border-radius: 30px;
   }
 
-  &--primary {
-    background-color: $primary-color;
+  &--plain {
+    background-color: #fff;
   }
+}
 
-  &--secondary {
-    background-color: $secondary-color;
-  }
+.c-button.c-button--plain {
+  color: $primary-color;
+}
 
-  &--tertiary {
-    background-color: $tertiary-color;
-  }
+.c-button--primary.c-button--plain {
+  color: $primary-color;
+}
 
-  &--success {
-    background-color: $success-color;
-  }
+.c-button--secondary.c-button--plain {
+  color: $secondary-color;
+}
 
-  &--warning {
-    color: $dark-color;
-    background-color: $warning-color;
-  }
+.c-button--tertiary.c-button--plain {
+  color: $tertiary-color;
+}
 
-  &--danger {
-    background-color: $danger-color;
-  }
+.c-button--success.c-button--plain {
+  color: $success-color;
+}
 
-  &--dark {
-    background-color: $dark-color;
-  }
+.c-button--warning.c-button--plain {
+  color: $warning-color;
+}
 
-  &--medium {
-    background-color: $medium-color;
-  }
+.c-button--danger.c-button--plain {
+  color: $danger-color;
+}
 
-  &--light {
-    color: $dark-color;
-    background-color: $light-color;
-  }
+.c-button--dark.c-button--plain {
+  color: $dark-color;
+}
+
+.c-button--medium.c-button--plain {
+  color: $medium-color;
+}
+
+.c-button--light.c-button--plain {
+  color: $light-color;
 }

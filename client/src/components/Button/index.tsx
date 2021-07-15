@@ -36,7 +36,6 @@ const loadingSize = {
 
 const Button: React.FC<ButtonProps> = (props) => {
   const { children, type, size, block, full, circle, plain, icon, disabled, loading, ...fieldProps } = props;
-  // TODO: plain添加镂空效果
 
   const classes = classNames(prefixCls, {
     [`${prefixCls}--${size}`]: size,
@@ -44,6 +43,7 @@ const Button: React.FC<ButtonProps> = (props) => {
     [`${prefixCls}--block`]: block,
     [`${prefixCls}--full`]: full,
     [`${prefixCls}--circle`]: circle,
+    [`${prefixCls}--plain`]: plain,
     [`${prefixCls}--loading`]: loading,
     [`${prefixCls}--disabled`]: disabled,
   });
