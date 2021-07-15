@@ -34,6 +34,36 @@ const Component: React.FC = () => {
         </View>
 
         <View className='section-item'>
+          <View className='sub-title'>图标按钮</View>
+          <Button type='danger' icon={<Icon icon='add' />}>
+            Add
+          </Button>
+        </View>
+
+        <View className='section-item'>
+          <View className='sub-title'>圆角按钮</View>
+          <Button type='danger' icon={<Icon icon='add' />} circle size='small'></Button>
+          <Button type='danger' icon={<Icon icon='download' />} circle>
+            Download
+          </Button>
+        </View>
+
+        <View className='section-item'>
+          <View className='sub-title'>镂空按钮</View>
+          <Button icon={<Icon icon='add' />} size='small' circle plain></Button>
+          <Button icon={<Icon icon='download' />} type='dark' circle plain>
+            Download
+          </Button>
+        </View>
+
+        <View className='section-item'>
+          <View className='sub-title'>Loading</View>
+          <Button loading size='small'>
+            Loading
+          </Button>
+        </View>
+
+        <View className='section-item'>
           <View className='sub-title'>按钮尺寸</View>
           <Button size='small'>small</Button>
           <Button>Default</Button>
@@ -46,7 +76,7 @@ const Component: React.FC = () => {
         </View>
 
         <View className='section-item'>
-          <View className='sub-title'>FULL</View>
+          <View className='sub-title'>通栏样式</View>
           <Button full>Full</Button>
         </View>
       </View>
