@@ -39,7 +39,6 @@ const Index: React.FC = () => {
   return (
     <View className='index'>
       <View className='title'>Index Page</View>
-
       <Form className='form'>
         <View className='form-item'>
           <Text className='form-item__label'>Width: </Text>
