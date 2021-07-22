@@ -2,6 +2,7 @@
 @import '../styles/variable.scss';
 
 .c-cell {
+  position: relative;
   display: flex;
   padding: 10px 16px;
   box-sizing: border-box;

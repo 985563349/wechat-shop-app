@@ -1,5 +1,5 @@
 import { View } from '@tarojs/components';
-import { Button, Cell, Icon } from '@/components';
+import { Button, Cell, CellGroup, Icon } from '@/components';
 
 import './index.scss';
 
@@ -79,6 +79,11 @@ const Component: React.FC = () => {
 
         <View className='section-item'>
           <Cell center />
+
+          <CellGroup title='Cell Group'>
+            <Cell center />
+            <Cell center />
+          </CellGroup>
         </View>
       </View>
     </View>
