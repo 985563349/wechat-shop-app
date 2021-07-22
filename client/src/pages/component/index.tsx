@@ -1,5 +1,5 @@
 import { View } from '@tarojs/components';
-import { Button, Icon } from '@/components';
+import { Button, Cell, Icon } from '@/components';
 
 import './index.scss';
 
@@ -71,6 +71,14 @@ const Component: React.FC = () => {
           <View className='sub-title'>图标大小</View>
           <Icon icon='heart' size='30' />
           <Icon icon='star-2' size='40' />
+        </View>
+      </View>
+
+      <View className='section'>
+        <View className='title'>Cell</View>
+
+        <View className='section-item'>
+          <Cell center />
         </View>
       </View>
     </View>
