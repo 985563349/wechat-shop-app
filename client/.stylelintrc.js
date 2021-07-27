@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['stylelint-config-prettier', 'stylelint-config-standard'],
+  extends: ['stylelint-prettier/recommended', 'stylelint-config-standard'],
   plugins: ['stylelint-prettier'],
   rules: {
     'prettier/prettier': true,

@@ -1,0 +1,163 @@
+/* postcss-pxtransform disable */
+@import '../styles/variable.scss';
+
+.c-button {
+  display: inline-block;
+  margin: 4px 2px;
+  border-radius: 10px;
+  border: 1px solid $primary-color;
+  padding: 14px;
+  line-height: 0;
+  box-shadow: none;
+  font-size: $size-font-base;
+  color: #fff;
+  background-color: $primary-color;
+
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  [class*='c-icon'] + &__text,
+  [class*='c-loading'] + &__text {
+    margin-left: 8px;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+  }
+
+  &::after {
+    display: none;
+    border: none;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  &--small {
+    padding: 7px;
+    border-radius: 6px;
+    font-size: $size-font-small;
+  }
+
+  &--large {
+    padding: 17px;
+    border-radius: 12px;
+    font-size: $size-font-large;
+  }
+
+  &--primary {
+    border-color: $primary-color;
+    background-color: $primary-color;
+  }
+
+  &--secondary {
+    border-color: $secondary-color;
+    background-color: $secondary-color;
+  }
+
+  &--tertiary {
+    border-color: $tertiary-color;
+    background-color: $tertiary-color;
+  }
+
+  &--success {
+    border-color: $success-color;
+    background-color: $success-color;
+  }
+
+  &--warning {
+    color: $dark-color;
+    border-color: $warning-color;
+    background-color: $warning-color;
+  }
+
+  &--danger {
+    border-color: $danger-color;
+    background-color: $danger-color;
+  }
+
+  &--dark {
+    border-color: $dark-color;
+    background-color: $dark-color;
+  }
+
+  &--medium {
+    border-color: $medium-color;
+    background-color: $medium-color;
+  }
+
+  &--light {
+    color: $dark-color;
+    border-color: $light-color;
+    background-color: $light-color;
+  }
+
+  &--disabled {
+    opacity: 0.6;
+  }
+
+  &--loading {
+    opacity: 0.6;
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--full {
+    display: block;
+    border-radius: 0;
+  }
+
+  &--circle {
+    border-radius: 30px;
+  }
+
+  &--plain {
+    background-color: #fff;
+  }
+}
+
+.c-button.c-button--plain {
+  color: $primary-color;
+}
+
+.c-button--primary.c-button--plain {
+  color: $primary-color;
+}
+
+.c-button--secondary.c-button--plain {
+  color: $secondary-color;
+}
+
+.c-button--tertiary.c-button--plain {
+  color: $tertiary-color;
+}
+
+.c-button--success.c-button--plain {
+  color: $success-color;
+}
+
+.c-button--warning.c-button--plain {
+  color: $warning-color;
+}
+
+.c-button--danger.c-button--plain {
+  color: $danger-color;
+}
+
+.c-button--dark.c-button--plain {
+  color: $dark-color;
+}
+
+.c-button--medium.c-button--plain {
+  color: $medium-color;
+}
+
+.c-button--light.c-button--plain {
+  color: $light-color;
+}

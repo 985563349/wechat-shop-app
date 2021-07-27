@@ -1,5 +1,5 @@
 export default {
-  pages: ['pages/index/index', 'pages/about/index'],
+  pages: ['pages/component/index', 'pages/index/index', 'pages/user/index'],
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
@@ -13,8 +13,12 @@ export default {
         text: 'Index',
       },
       {
-        pagePath: 'pages/about/index',
-        text: 'About',
+        pagePath: 'pages/component/index',
+        text: 'Component',
+      },
+      {
+        pagePath: 'pages/user/index',
+        text: 'User',
       },
     ],
   },
