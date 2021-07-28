@@ -8,7 +8,6 @@ export interface CellGroupProps {
 
 const CellGroup: React.FC<CellGroupProps> = (props) => {
   const { title, children } = props;
-
   return (
     <View className='c-cell-group'>
       {title ? <View className='c-cell-group__title'>{title}</View> : null}
@@ -16,5 +15,4 @@ const CellGroup: React.FC<CellGroupProps> = (props) => {
     </View>
   );
 };
-
 export default CellGroup;

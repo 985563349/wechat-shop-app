@@ -106,10 +106,8 @@ const Component: React.FC = () => {
 
       <View className='section'>
         <View className='title'>Cell</View>
-
         <View className='section-item'>
           <Cell center />
-
           <CellGroup title='Cell Group'>
             <Cell center />
             <Cell center />
