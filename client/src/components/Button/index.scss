@@ -1,7 +1,11 @@
 /* postcss-pxtransform disable */
 @import '../styles/variable.scss';
 
-.c-button {
+$btn-prefix-cls: #{$class-prefix}-button;
+$icon-prefix-cls: #{$class-prefix}-icon;
+$loading-prefix-cls: #{$class-prefix}-loading;
+
+.#{$btn-prefix-cls} {
   display: inline-block;
   margin: 4px 2px;
   border-radius: 10px;
@@ -19,8 +23,8 @@
     line-height: 1;
   }
 
-  [class*='c-icon'] + &__text,
-  [class*='c-loading'] + &__text {
+  [class*='#{$icon-prefix-cls}'] + &__text,
+  [class*='#{$loading-prefix-cls}'] + &__text {
     margin-left: 8px;
   }
 
@@ -122,42 +126,42 @@
   }
 }
 
-.c-button.c-button--plain {
+.#{$btn-prefix-cls}.#{$btn-prefix-cls}--plain {
   color: $primary-color;
 }
 
-.c-button--primary.c-button--plain {
+.#{$btn-prefix-cls}--primary.#{$btn-prefix-cls}--plain {
   color: $primary-color;
 }
 
-.c-button--secondary.c-button--plain {
+.#{$btn-prefix-cls}--secondary.#{$btn-prefix-cls}--plain {
   color: $secondary-color;
 }
 
-.c-button--tertiary.c-button--plain {
+.#{$btn-prefix-cls}--tertiary.#{$btn-prefix-cls}--plain {
   color: $tertiary-color;
 }
 
-.c-button--success.c-button--plain {
+.#{$btn-prefix-cls}--success.#{$btn-prefix-cls}--plain {
   color: $success-color;
 }
 
-.c-button--warning.c-button--plain {
+.#{$btn-prefix-cls}--warning.#{$btn-prefix-cls}--plain {
   color: $warning-color;
 }
 
-.c-button--danger.c-button--plain {
+.#{$btn-prefix-cls}--danger.#{$btn-prefix-cls}--plain {
   color: $danger-color;
 }
 
-.c-button--dark.c-button--plain {
+.#{$btn-prefix-cls}--dark.#{$btn-prefix-cls}--plain {
   color: $dark-color;
 }
 
-.c-button--medium.c-button--plain {
+.#{$btn-prefix-cls}--medium.#{$btn-prefix-cls}--plain {
   color: $medium-color;
 }
 
-.c-button--light.c-button--plain {
+.#{$btn-prefix-cls}--light.#{$btn-prefix-cls}--plain {
   color: $light-color;
 }
