@@ -1,5 +1,12 @@
 export default {
-  pages: ['pages/component/index', 'pages/index/index', 'pages/user/index'],
+  pages: [
+    'pages/component/index',
+    'pages/index/index',
+    'pages/user/index',
+    'pages/button-demo/index',
+    'pages/cell-demo/index',
+    'pages/icon-demo/index',
+  ],
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',

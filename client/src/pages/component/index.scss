@@ -1,14 +1,30 @@
+.desc {
+  margin: 24px 36px 48px;
+  font-size: 56px;
+  color: #1c2438;
+}
+
 .section {
-  margin-bottom: 64px;
-  padding: 0 12px;
+  margin-bottom: 80px;
+  padding: 0 40px;
 
-  .title {
-    margin: 24px 0;
-    font-size: 48px;
+  &-title {
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #495060;
   }
+}
 
-  .sub-title {
-    margin: 18px 0;
-    font-size: 30px;
-  }
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  line-height: 80px;
+  margin-bottom: 30px;
+  border-radius: 40px;
+  padding: 0 40px;
+  font-size: 28px;
+  background-color: #f7f8fa;
+  color: #323233;
 }

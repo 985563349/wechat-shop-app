@@ -1,7 +1,7 @@
 /* postcss-pxtransform disable */
 @import '../styles/variable.scss';
 
-$cell-prefix-cls: #{$class-prefix}-group;
+$cell-prefix-cls: #{$class-prefix}-cell;
 $cell-group-prefix-cls: #{$class-prefix}-cell-group;
 
 .#{$cell-group-prefix-cls} {
