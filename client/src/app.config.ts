@@ -1,9 +1,9 @@
 export default {
   pages: [
+    'pages/button-demo/index',
     'pages/component/index',
     'pages/index/index',
     'pages/user/index',
-    'pages/button-demo/index',
     'pages/cell-demo/index',
     'pages/icon-demo/index',
   ],

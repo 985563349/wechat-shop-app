@@ -10,14 +10,9 @@ const ButtonDemo: React.FC = () => {
         <View className='title'>按钮类型</View>
 
         <Button>Default</Button>
-        <Button type='danger'>Danger</Button>
-        <Button type='dark'>Dark</Button>
-        <Button type='light'>Light</Button>
-        <Button type='medium'>Medium</Button>
         <Button type='primary'>Primary</Button>
-        <Button type='secondary'>Secondary</Button>
+        <Button type='danger'>Danger</Button>
         <Button type='success'>Success</Button>
-        <Button type='tertiary'>Tertiary</Button>
         <Button type='warning'>Warning</Button>
       </View>
 
@@ -26,9 +21,6 @@ const ButtonDemo: React.FC = () => {
 
         <Button type='danger' disabled>
           Danger
-        </Button>
-        <Button type='dark' disabled>
-          Dark
         </Button>
       </View>
 
@@ -43,7 +35,7 @@ const ButtonDemo: React.FC = () => {
       <View className='section'>
         <View className='title'>圆角按钮</View>
 
-        <Button type='danger' icon={<Icon icon='add' />} circle size='small'></Button>
+        <Button type='danger' icon={<Icon icon='add' />} circle></Button>
         <Button type='danger' icon={<Icon icon='download' />} circle>
           Download
         </Button>
@@ -52,10 +44,11 @@ const ButtonDemo: React.FC = () => {
       <View className='section'>
         <View className='title'>镂空按钮</View>
 
-        <Button icon={<Icon icon='add' />} size='small' circle plain></Button>
-        <Button icon={<Icon icon='download' />} type='dark' circle plain>
-          Download
-        </Button>
+        <Button icon={<Icon icon='add' />} circle plain></Button>
+        <Button type='primary' icon={<Icon icon='add' />} circle plain></Button>
+        <Button type='danger' icon={<Icon icon='add' />} circle plain disabled></Button>
+        <Button type='success' icon={<Icon icon='add' />} circle plain></Button>
+        <Button type='warning' icon={<Icon icon='add' />} circle plain></Button>
       </View>
 
       <View className='section'>

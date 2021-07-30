@@ -5,17 +5,20 @@ $btn-prefix-cls: #{$class-prefix}-button;
 $icon-prefix-cls: #{$class-prefix}-icon;
 $loading-prefix-cls: #{$class-prefix}-loading;
 
+$btn-text-dark-color: $title-color;
+$btn-text-light-color: $light-color;
+
 .#{$btn-prefix-cls} {
   display: inline-block;
   margin: 4px 2px;
   border-radius: 10px;
-  border: 1px solid $primary-color;
+  border: 1px solid $default-color;
   padding: 14px;
   line-height: 0;
   box-shadow: none;
   font-size: $size-font-base;
-  color: #fff;
-  background-color: $primary-color;
+  color: $btn-text-dark-color;
+  background-color: $default-color;
 
   &__text {
     display: inline-block;
@@ -25,11 +28,12 @@ $loading-prefix-cls: #{$class-prefix}-loading;
 
   [class*='#{$icon-prefix-cls}'] + &__text,
   [class*='#{$loading-prefix-cls}'] + &__text {
-    margin-left: 8px;
+    margin-left: 0.5em;
   }
 
   &[disabled] {
     pointer-events: none;
+    color: $btn-text-dark-color;
   }
 
   &::after {
@@ -39,6 +43,61 @@ $loading-prefix-cls: #{$class-prefix}-loading;
 
   &:active {
     opacity: 0.8;
+  }
+
+  &--primary {
+    border-color: $primary-color;
+    color: $btn-text-light-color;
+    background-color: $primary-color;
+
+    &.#{$btn-prefix-cls}--disabled {
+      color: $btn-text-light-color;
+    }
+
+    &.#{$btn-prefix-cls}--plain {
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+  }
+
+  &--success {
+    border-color: $success-color;
+    color: $btn-text-light-color;
+    background-color: $success-color;
+
+    &.#{$btn-prefix-cls}--disabled {
+      color: $btn-text-light-color;
+    }
+
+    &.#{$btn-prefix-cls}--plain {
+      border-color: $success-color;
+      color: $success-color;
+    }
+  }
+
+  &--warning {
+    border-color: $warning-color;
+    background-color: $warning-color;
+
+    &.#{$btn-prefix-cls}--plain {
+      border-color: $warning-color;
+      color: $warning-color;
+    }
+  }
+
+  &--danger {
+    border-color: $danger-color;
+    color: $btn-text-light-color;
+    background-color: $danger-color;
+
+    &.#{$btn-prefix-cls}--disabled {
+      color: $btn-text-light-color;
+    }
+
+    &.#{$btn-prefix-cls}--plain {
+      border-color: $danger-color;
+      color: $danger-color;
+    }
   }
 
   &--small {
@@ -53,59 +112,12 @@ $loading-prefix-cls: #{$class-prefix}-loading;
     font-size: $size-font-large;
   }
 
-  &--primary {
-    border-color: $primary-color;
-    background-color: $primary-color;
-  }
-
-  &--secondary {
-    border-color: $secondary-color;
-    background-color: $secondary-color;
-  }
-
-  &--tertiary {
-    border-color: $tertiary-color;
-    background-color: $tertiary-color;
-  }
-
-  &--success {
-    border-color: $success-color;
-    background-color: $success-color;
-  }
-
-  &--warning {
-    color: $dark-color;
-    border-color: $warning-color;
-    background-color: $warning-color;
-  }
-
-  &--danger {
-    border-color: $danger-color;
-    background-color: $danger-color;
-  }
-
-  &--dark {
-    border-color: $dark-color;
-    background-color: $dark-color;
-  }
-
-  &--medium {
-    border-color: $medium-color;
-    background-color: $medium-color;
-  }
-
-  &--light {
-    color: $dark-color;
-    border-color: $light-color;
-    background-color: $light-color;
-  }
-
   &--disabled {
-    opacity: 0.6;
+    opacity: 0.5;
   }
 
   &--loading {
-    opacity: 0.6;
+    opacity: 0.5;
   }
 
   &--block {
@@ -122,46 +134,7 @@ $loading-prefix-cls: #{$class-prefix}-loading;
   }
 
   &--plain {
-    background-color: #fff;
+    background-color: transparent;
+    border-color: $border-color;
   }
-}
-
-.#{$btn-prefix-cls}.#{$btn-prefix-cls}--plain {
-  color: $primary-color;
-}
-
-.#{$btn-prefix-cls}--primary.#{$btn-prefix-cls}--plain {
-  color: $primary-color;
-}
-
-.#{$btn-prefix-cls}--secondary.#{$btn-prefix-cls}--plain {
-  color: $secondary-color;
-}
-
-.#{$btn-prefix-cls}--tertiary.#{$btn-prefix-cls}--plain {
-  color: $tertiary-color;
-}
-
-.#{$btn-prefix-cls}--success.#{$btn-prefix-cls}--plain {
-  color: $success-color;
-}
-
-.#{$btn-prefix-cls}--warning.#{$btn-prefix-cls}--plain {
-  color: $warning-color;
-}
-
-.#{$btn-prefix-cls}--danger.#{$btn-prefix-cls}--plain {
-  color: $danger-color;
-}
-
-.#{$btn-prefix-cls}--dark.#{$btn-prefix-cls}--plain {
-  color: $dark-color;
-}
-
-.#{$btn-prefix-cls}--medium.#{$btn-prefix-cls}--plain {
-  color: $medium-color;
-}
-
-.#{$btn-prefix-cls}--light.#{$btn-prefix-cls}--plain {
-  color: $light-color;
 }

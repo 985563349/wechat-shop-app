@@ -7,17 +7,9 @@ import Loading from '../Loading';
 
 import './index.scss';
 
-export type ButtonType =
-  | 'primary'
-  | 'secondary'
-  | 'tertiary'
-  | 'success'
-  | 'warning'
-  | 'danger'
-  | 'dark'
-  | 'medium'
-  | 'light';
+export type ButtonType = 'primary' | 'success' | 'warning' | 'danger';
 export type ButtonSize = 'small' | 'large';
+
 export interface ButtonProps extends Omit<NativeButtonProps, 'size' | 'type'> {
   type?: ButtonType;
   size?: ButtonSize;
