@@ -11,13 +11,13 @@ const Component: React.FC = () => {
         <View className='section-title'>基础组件</View>
 
         <View className='nav-group'>
-          <Navigator className='nav' url='../button-demo/index'>
+          <Navigator className='nav' url='./button-demo/index'>
             Button 按钮
           </Navigator>
-          <Navigator className='nav' url='../cell-demo/index'>
+          <Navigator className='nav' url='./cell-demo/index'>
             Cell 单元格
           </Navigator>
-          <Navigator className='nav' url='../icon-demo/index'>
+          <Navigator className='nav' url='./icon-demo/index'>
             Icon 图标
           </Navigator>
         </View>

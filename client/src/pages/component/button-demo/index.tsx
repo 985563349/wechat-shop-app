@@ -63,8 +63,10 @@ const ButtonDemo: React.FC = () => {
         <View className='title'>按钮尺寸</View>
 
         <Button size='small'>small</Button>
-        <Button>Default</Button>
-        <Button size='large'>Large</Button>
+        <Button type='danger'>Default</Button>
+        <Button size='large' type='success'>
+          Large
+        </Button>
       </View>
 
       <View className='section'>
@@ -76,7 +78,9 @@ const ButtonDemo: React.FC = () => {
       <View className='section'>
         <View className='title'>通栏样式</View>
 
-        <Button full>Full</Button>
+        <Button full type='primary'>
+          Full
+        </Button>
       </View>
     </View>
   );

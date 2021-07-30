@@ -1,11 +1,11 @@
 export default {
   pages: [
-    'pages/button-demo/index',
     'pages/component/index',
     'pages/index/index',
     'pages/user/index',
-    'pages/cell-demo/index',
-    'pages/icon-demo/index',
+    'pages/component/button-demo/index',
+    'pages/component/cell-demo/index',
+    'pages/component/icon-demo/index',
   ],
   window: {
     backgroundTextStyle: 'light',
