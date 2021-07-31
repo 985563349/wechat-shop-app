@@ -1,5 +1,6 @@
 export default {
   pages: [
+    'pages/component/switch-demo/index',
     'pages/component/index',
     'pages/index/index',
     'pages/user/index',

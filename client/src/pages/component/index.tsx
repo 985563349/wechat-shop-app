@@ -29,7 +29,9 @@ const Component: React.FC = () => {
         <View className='nav-group'>
           <Navigator className='nav'>Checkbox 复选框</Navigator>
           <Navigator className='nav'>Radio 单选框</Navigator>
-          <Navigator className='nav'>Switch 开关</Navigator>
+          <Navigator className='nav' url='./switch-demo/index'>
+            Switch 开关
+          </Navigator>
         </View>
       </View>
     </View>
