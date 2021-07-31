@@ -1,7 +1,10 @@
 /* postcss-pxtransform disable */
 @import '../styles/variable.scss';
 
-.c-cell-group {
+$cell-prefix-cls: #{$class-prefix}-cell;
+$cell-group-prefix-cls: #{$class-prefix}-cell-group;
+
+.#{$cell-group-prefix-cls} {
   &__title {
     margin: 0;
     padding: 16px 16px;
@@ -11,7 +14,7 @@
     line-height: 16px;
   }
 
-  .c-cell {
+  .#{$cell-prefix-cls} {
     &::after {
       position: absolute;
       right: 16px;
