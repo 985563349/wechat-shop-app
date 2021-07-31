@@ -2,7 +2,7 @@ import { View } from '@tarojs/components';
 import type { ITouchEvent } from '@tarojs/components';
 import classNames from 'classnames';
 
-import { getPrefixCls, userMergedState } from '../utils';
+import { getPrefixCls, useMergedState } from '../utils';
 
 import './index.scss';
 
@@ -24,7 +24,7 @@ const prefixCls = getPrefixCls('switch');
 const Switch: React.FC<SwitchProps> = (props) => {
   const { type, size, disabled, checked, defaultChecked, onChange, onClick } = props;
 
-  const [innerValue, setInnerValue] = userMergedState<boolean>(false, { value: checked, defaultValue: defaultChecked });
+  const [innerValue, setInnerValue] = useMergedState<boolean>(false, { value: checked, defaultValue: defaultChecked });
 
   const classes = classNames(prefixCls, {
     [`${prefixCls}--active`]: innerValue,
@@ -53,7 +53,7 @@ const Switch: React.FC<SwitchProps> = (props) => {
 };
 
 Switch.defaultProps = {
-  defaultChecked: false,
+  defaultChecked: true,
 };
 
 export default Switch;

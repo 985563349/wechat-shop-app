@@ -8,16 +8,16 @@ const SwitchDemo: React.FC = () => {
     <View className='switch-demo'>
       <View className='section'>
         <View className='title'>基础用法</View>
-        <Switch defaultChecked />
-        <Switch type='primary' defaultChecked />
-        <Switch type='success' defaultChecked />
-        <Switch type='warning' defaultChecked />
-        <Switch type='danger' defaultChecked />
+        <Switch />
+        <Switch type='primary' />
+        <Switch type='success' />
+        <Switch type='warning' />
+        <Switch type='danger' />
       </View>
 
       <View className='section'>
         <View className='title'>禁用状态</View>
-        <Switch type='danger' defaultChecked disabled />
+        <Switch type='danger' disabled />
       </View>
     </View>
   );

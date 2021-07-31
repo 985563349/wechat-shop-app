@@ -1,1 +1,1 @@
-export { default as userMergedState } from './userMergedState';
+export { default as useMergedState } from './useMergedState';
