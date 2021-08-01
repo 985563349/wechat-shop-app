@@ -1,4 +1,8 @@
 /* postcss-pxtransform disable */
+@import '../styles/variable.scss';
+
+$loading-prefix-cls: #{$class-prefix}-loading;
+
 @keyframes loading {
   0% {
     transform: rotate(0deg);
@@ -9,7 +13,7 @@
   }
 }
 
-.c-loading {
+.#{$loading-prefix-cls} {
   display: inline-block;
   position: relative;
   width: 18px;

@@ -1,0 +1,72 @@
+/* postcss-pxtransform disable */
+@import '../styles/variable.scss';
+
+$switch-prefix-cls: #{$class-prefix}-switch;
+
+.#{$switch-prefix-cls} {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  margin: 4px 2px;
+  width: 60px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  background-color: #fff;
+  transition: background 0.3s cubic-bezier(0.3, 1.05, 0.4, 1.05);
+
+  &__core {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    box-shadow: 0 3px 1px 0 rgb(0 0 0 / 5%), 0 2px 2px 0 rgb(0 0 0 / 10%), 0 3px 3px 0 rgb(0 0 0 / 5%);
+    transition: left 0.3s cubic-bezier(0.3, 1.05, 0.4, 1.05);
+    background-color: #fff;
+  }
+
+  &--primary {
+    &.#{$switch-prefix-cls}--active {
+      background-color: $primary-color;
+      border-color: $primary-color;
+    }
+  }
+
+  &--success {
+    &.#{$switch-prefix-cls}--active {
+      background-color: $success-color;
+      border-color: $success-color;
+    }
+  }
+
+  &--warning {
+    &.#{$switch-prefix-cls}--active {
+      background-color: $warning-color;
+      border-color: $warning-color;
+    }
+  }
+
+  &--danger {
+    &.#{$switch-prefix-cls}--active {
+      background-color: $danger-color;
+      border-color: $danger-color;
+    }
+  }
+
+  &--active {
+    background-color: $default-color;
+    border-color: $default-color;
+  }
+
+  &--active &__core {
+    left: 31px;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+  }
+}

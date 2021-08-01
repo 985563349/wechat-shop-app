@@ -1,7 +1,9 @@
 /* postcss-pxtransform disable */
 @import '../styles/variable.scss';
 
-.c-cell {
+$cell-prefix-cls: #{$class-prefix}-cell;
+
+.#{$cell-prefix-cls} {
   position: relative;
   display: flex;
   padding: 10px 16px;
