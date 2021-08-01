@@ -32,6 +32,9 @@ const Component: React.FC = () => {
           <Navigator className='nav' url='./switch-demo/index'>
             Switch 开关
           </Navigator>
+          <Navigator className='nav' url='./overlay-demo/index'>
+            遮罩层
+          </Navigator>
         </View>
       </View>
     </View>

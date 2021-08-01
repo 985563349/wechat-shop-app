@@ -12,3 +12,5 @@ export type { CellGroupProps } from './CellGroup';
 
 export { default as Switch } from './Switch';
 export type { SwitchProps } from './Switch';
+export { default as Overlay } from './Overlay';
+export type { OverlayProps } from './Overlay';

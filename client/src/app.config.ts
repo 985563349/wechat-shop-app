@@ -7,6 +7,7 @@ export default {
     'pages/component/cell-demo/index',
     'pages/component/icon-demo/index',
     'pages/component/switch-demo/index',
+    'pages/component/overlay-demo/index',
   ],
   window: {
     backgroundTextStyle: 'light',
