@@ -1,6 +1,8 @@
 import { View, Text } from '@tarojs/components';
 import classNames from 'classnames';
 
+import { getPrefixCls } from '../utils';
+
 import './index.scss';
 
 export interface CellProps {
@@ -10,7 +12,7 @@ export interface CellProps {
   center?: boolean;
 }
 
-const prefixCls = 'c-cell';
+const prefixCls = getPrefixCls('cell');
 
 const Cell: React.FC<CellProps> = (props) => {
   const { title, value, label, center } = props;
@@ -21,12 +23,12 @@ const Cell: React.FC<CellProps> = (props) => {
 
   return (
     <View className={classes}>
-      <View className='c-cell__title'>
+      <View className={`${prefixCls}__title`}>
         <Text>{title}</Text>
-        {label ? <View className='c-cell__label'>{label}</View> : null}
+        {label ? <View className={`${prefixCls}__label`}>{label}</View> : null}
       </View>
 
-      <View className='c-cell__value'>{value}</View>
+      <View className={`${prefixCls}__value`}>{value}</View>
     </View>
   );
 };

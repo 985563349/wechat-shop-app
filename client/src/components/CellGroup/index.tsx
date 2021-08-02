@@ -1,16 +1,20 @@
 import { View } from '@tarojs/components';
 
+import { getPrefixCls } from '../utils';
+
 import './index.scss';
 
 export interface CellGroupProps {
   title?: string;
 }
 
+const prefixCls = getPrefixCls('cell-group');
+
 const CellGroup: React.FC<CellGroupProps> = (props) => {
   const { title, children } = props;
   return (
-    <View className='c-cell-group'>
-      {title ? <View className='c-cell-group__title'>{title}</View> : null}
+    <View className={prefixCls}>
+      {title ? <View className={`${prefixCls}__title`}>{title}</View> : null}
       {children}
     </View>
   );
