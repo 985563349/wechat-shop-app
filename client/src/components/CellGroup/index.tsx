@@ -12,7 +12,6 @@ const prefixCls = getPrefixCls('cell-group');
 
 const CellGroup: React.FC<CellGroupProps> = (props) => {
   const { title, children } = props;
-
   return (
     <View className={prefixCls}>
       {title ? <View className={`${prefixCls}__title`}>{title}</View> : null}
@@ -20,5 +19,4 @@ const CellGroup: React.FC<CellGroupProps> = (props) => {
     </View>
   );
 };
-
 export default CellGroup;

@@ -14,3 +14,5 @@ export { default as Switch } from './Switch';
 export type { SwitchProps } from './Switch';
 export { default as Overlay } from './Overlay';
 export type { OverlayProps } from './Overlay';
+export { default as Checkbox } from './Checkbox';
+export { default as CheckboxGroup } from './Checkbox';

@@ -18,9 +18,7 @@ export interface ButtonProps extends Omit<NativeButtonProps, 'size' | 'type'> {
   circle?: boolean;
   icon?: React.ReactNode;
 }
-
 const prefixCls = getPrefixCls('button');
-
 // TODO: 等待后期优化loadingSize跟随font-size变化
 const loadingSize = {
   small: 13,

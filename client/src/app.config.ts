@@ -8,6 +8,7 @@ export default {
     'pages/component/icon-demo/index',
     'pages/component/switch-demo/index',
     'pages/component/overlay-demo/index',
+    'pages/component/checkbox-demo/index',
   ],
   window: {
     backgroundTextStyle: 'light',

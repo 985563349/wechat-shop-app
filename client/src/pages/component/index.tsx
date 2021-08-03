@@ -27,7 +27,9 @@ const Component: React.FC = () => {
         <View className='section-title'>表单组件</View>
 
         <View className='nav-group'>
-          <Navigator className='nav'>Checkbox 复选框</Navigator>
+          <Navigator className='nav' url='./checkbox-demo/index'>
+            Checkbox 复选框
+          </Navigator>
           <Navigator className='nav'>Radio 单选框</Navigator>
           <Navigator className='nav' url='./switch-demo/index'>
             Switch 开关
