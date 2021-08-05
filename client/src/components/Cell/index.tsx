@@ -2,6 +2,7 @@ import { View, Text } from '@tarojs/components';
 import classNames from 'classnames';
 
 import { getPrefixCls } from '../utils';
+import CellGroup from './cell-group';
 
 import './index.scss';
 
@@ -14,7 +15,9 @@ export interface CellProps {
 
 const prefixCls = getPrefixCls('cell');
 
-const Cell: React.FC<CellProps> = (props) => {
+const Cell: React.FC<CellProps> & {
+  Group: typeof CellGroup;
+} = (props) => {
   const { title, value, label, center } = props;
 
   const classes = classNames(prefixCls, {
@@ -32,6 +35,8 @@ const Cell: React.FC<CellProps> = (props) => {
     </View>
   );
 };
+
+Cell.Group = CellGroup;
 
 Cell.defaultProps = {
   title: 'Title',

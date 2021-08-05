@@ -1,14 +1,11 @@
-export { default as Button } from './Button';
-export type { ButtonProps } from './Button';
+export { default as Button } from './button';
+export type { ButtonProps } from './button';
 
-export { default as Icon } from './Icon';
-export type { IconProps } from './Icon';
+export { default as Icon } from './icon';
+export type { IconProps } from './icon';
 
-export { default as Cell } from './Cell';
-export type { CellProps } from './Cell';
+export { default as Cell } from './cell';
+export type { CellProps } from './cell';
 
-export { default as CellGroup } from './CellGroup';
-export type { CellGroupProps } from './CellGroup';
-
-export { default as Switch } from './Switch';
-export type { SwitchProps } from './Switch';
+export { default as Switch } from './switch';
+export type { SwitchProps } from './switch';

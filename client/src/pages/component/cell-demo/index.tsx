@@ -1,5 +1,5 @@
 import { View } from '@tarojs/components';
-import { Cell, CellGroup } from '@/components';
+import { Cell } from '@/components';
 
 import './index.scss';
 
@@ -10,10 +10,11 @@ const CellDemo: React.FC = () => {
         <View className='title'>Cell</View>
 
         <Cell center />
-        <CellGroup title='Cell Group'>
+
+        <Cell.Group title='Cell Group'>
           <Cell center />
           <Cell center />
-        </CellGroup>
+        </Cell.Group>
       </View>
     </View>
   );

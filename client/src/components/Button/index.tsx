@@ -3,7 +3,7 @@ import type { ButtonProps as NativeButtonProps } from '@tarojs/components';
 import classNames from 'classnames';
 
 import { getPrefixCls } from '../utils';
-import Loading from '../Loading';
+import Loading from '../loading';
 
 import './index.scss';
 
