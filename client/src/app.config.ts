@@ -1,5 +1,6 @@
 export default {
   pages: [
+    'pages/component/layout-demo/index',
     'pages/component/index',
     'pages/index/index',
     'pages/user/index',
