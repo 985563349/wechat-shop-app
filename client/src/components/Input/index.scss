@@ -1,0 +1,140 @@
+/* postcss-pxtransform disable */
+@import '../styles/variable.scss';
+
+$btn-prefix-cls: #{$class-prefix}-button;
+$icon-prefix-cls: #{$class-prefix}-icon;
+$loading-prefix-cls: #{$class-prefix}-loading;
+
+$btn-text-dark-color: $title-color;
+$btn-text-light-color: $light-color;
+
+.#{$btn-prefix-cls} {
+  display: inline-block;
+  margin: 4px 2px;
+  border-radius: 10px;
+  border: 1px solid $default-color;
+  padding: 14px;
+  line-height: 0;
+  box-shadow: none;
+  font-size: $size-font-base;
+  color: $btn-text-dark-color;
+  background-color: $default-color;
+
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  [class*='#{$icon-prefix-cls}'] + &__text,
+  [class*='#{$loading-prefix-cls}'] + &__text {
+    margin-left: 0.5em;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    color: $btn-text-dark-color;
+  }
+
+  &::after {
+    display: none;
+    border: none;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  &--primary {
+    border-color: $primary-color;
+    color: $btn-text-light-color;
+    background-color: $primary-color;
+
+    &.#{$btn-prefix-cls}--disabled {
+      color: $btn-text-light-color;
+    }
+
+    &.#{$btn-prefix-cls}--plain {
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+  }
+
+  &--success {
+    border-color: $success-color;
+    color: $btn-text-light-color;
+    background-color: $success-color;
+
+    &.#{$btn-prefix-cls}--disabled {
+      color: $btn-text-light-color;
+    }
+
+    &.#{$btn-prefix-cls}--plain {
+      border-color: $success-color;
+      color: $success-color;
+    }
+  }
+
+  &--warning {
+    border-color: $warning-color;
+    background-color: $warning-color;
+
+    &.#{$btn-prefix-cls}--plain {
+      border-color: $warning-color;
+      color: $warning-color;
+    }
+  }
+
+  &--danger {
+    border-color: $danger-color;
+    color: $btn-text-light-color;
+    background-color: $danger-color;
+
+    &.#{$btn-prefix-cls}--disabled {
+      color: $btn-text-light-color;
+    }
+
+    &.#{$btn-prefix-cls}--plain {
+      border-color: $danger-color;
+      color: $danger-color;
+    }
+  }
+
+  &--small {
+    padding: 7px;
+    border-radius: 6px;
+    font-size: $size-font-small;
+  }
+
+  &--large {
+    padding: 17px;
+    border-radius: 12px;
+    font-size: $size-font-large;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+  }
+
+  &--loading {
+    opacity: 0.5;
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--full {
+    display: block;
+    border-radius: 0;
+  }
+
+  &--circle {
+    border-radius: 30px;
+  }
+
+  &--plain {
+    background-color: transparent;
+    border-color: $border-color;
+  }
+}
