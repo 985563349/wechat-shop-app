@@ -20,6 +20,9 @@ const Component: React.FC = () => {
           <Navigator className='nav' url='./icon-demo/index'>
             Icon 图标
           </Navigator>
+          <Navigator className='nav' url='./layout-demo/index'>
+            Layout 布局
+          </Navigator>
         </View>
       </View>
 

@@ -1,0 +1,24 @@
+/* postcss-pxtransform disable */
+@import '../styles/variable.scss';
+
+$col-prefix-cls: #{$class-prefix}-col;
+
+/* stylelint-disable-next-line at-rule-no-unknown */
+@for $i from 1 through $grid-columns {
+  .#{$col-prefix-cls}-#{$i} {
+    display: block;
+    flex: 0 0 percentage($i / $grid-columns);
+    max-width: percentage($i / $grid-columns);
+  }
+}
+
+/* stylelint-disable-next-line at-rule-no-unknown */
+@for $i from 1 through $grid-columns {
+  .#{$col-prefix-cls}-offset-#{$i} {
+    margin-left: percentage($i / $grid-columns);
+  }
+}
+
+.#{$col-prefix-cls} {
+  box-sizing: border-box;
+}
