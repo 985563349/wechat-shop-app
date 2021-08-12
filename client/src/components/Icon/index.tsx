@@ -32,8 +32,4 @@ const Icon: React.FC<IconProps> = (props) => {
   return <View className={classes} style={styles}></View>;
 };
 
-Icon.defaultProps = {
-  size: 24,
-};
-
 export default Icon;

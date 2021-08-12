@@ -2,6 +2,7 @@
 @import '../styles/variable.scss';
 
 $cell-prefix-cls: #{$class-prefix}-cell;
+$icon-prefix-cls: #{$class-prefix}-icon;
 
 .#{$cell-prefix-cls} {
   position: relative;
@@ -15,6 +16,30 @@ $cell-prefix-cls: #{$class-prefix}-cell;
 
   &--center {
     align-items: center;
+  }
+
+  .#{$cell-prefix-cls}__left-icon,
+  .#{$cell-prefix-cls}__right-icon {
+    display: inline-flex;
+    align-items: center;
+
+    .#{$icon-prefix-cls} {
+      font-size: 18px;
+    }
+  }
+
+  .#{$cell-prefix-cls}__left-icon {
+    .#{$icon-prefix-cls} {
+      margin-right: 4px;
+      color: $title-color;
+    }
+  }
+
+  .#{$cell-prefix-cls}__right-icon {
+    .#{$icon-prefix-cls} {
+      margin-left: 4px;
+      color: $text-color;
+    }
   }
 
   &__title {
@@ -32,5 +57,22 @@ $cell-prefix-cls: #{$class-prefix}-cell;
   &__value {
     flex: 1;
     text-align: right;
+  }
+
+  &::after {
+    position: absolute;
+    right: 16px;
+    bottom: 0;
+    left: 16px;
+    box-sizing: border-box;
+    display: block;
+    content: '';
+    border-bottom: 1px solid #ebedf0;
+    transform: scaleY(0.5);
+    pointer-events: none;
+  }
+
+  &:last-child::after {
+    display: none;
   }
 }

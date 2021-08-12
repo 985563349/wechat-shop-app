@@ -13,25 +13,4 @@ $cell-group-prefix-cls: #{$class-prefix}-cell-group;
     font-size: 14px;
     line-height: 16px;
   }
-
-  .#{$cell-prefix-cls} {
-    &::after {
-      position: absolute;
-      right: 16px;
-      bottom: 0;
-      left: 16px;
-      box-sizing: border-box;
-      display: block;
-      content: '';
-      border-bottom: 1px solid #ebedf0;
-      transform: scaleY(0.5);
-      pointer-events: none;
-    }
-
-    &:last-child {
-      &::after {
-        display: none;
-      }
-    }
-  }
 }
