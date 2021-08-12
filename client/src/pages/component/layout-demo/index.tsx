@@ -5,7 +5,7 @@ import './index.scss';
 
 const LayoutDemo: React.FC = () => {
   return (
-    <View className='layout-demo'>
+    <View className='demo layout-demo'>
       <View className='section'>
         <View className='title'>基础用法</View>
 

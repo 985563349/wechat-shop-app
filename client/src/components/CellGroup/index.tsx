@@ -2,7 +2,7 @@ import { View } from '@tarojs/components';
 
 import { getPrefixCls } from '../utils';
 
-import './cell-group.scss';
+import './index.scss';
 
 export interface CellGroupProps {
   title?: string;

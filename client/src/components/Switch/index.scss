@@ -10,9 +10,8 @@ $switch-prefix-cls: #{$class-prefix}-switch;
   margin: 4px 2px;
   width: 60px;
   height: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 30px;
-  background-color: #fff;
+  background-color: #e3e3e4;
   transition: background 0.3s cubic-bezier(0.3, 1.05, 0.4, 1.05);
 
   &__core {
@@ -32,34 +31,29 @@ $switch-prefix-cls: #{$class-prefix}-switch;
   &--primary {
     &.#{$switch-prefix-cls}--active {
       background-color: $primary-color;
-      border-color: $primary-color;
     }
   }
 
   &--success {
     &.#{$switch-prefix-cls}--active {
       background-color: $success-color;
-      border-color: $success-color;
     }
   }
 
   &--warning {
     &.#{$switch-prefix-cls}--active {
       background-color: $warning-color;
-      border-color: $warning-color;
     }
   }
 
   &--danger {
     &.#{$switch-prefix-cls}--active {
       background-color: $danger-color;
-      border-color: $danger-color;
     }
   }
 
   &--active {
     background-color: $default-color;
-    border-color: $default-color;
   }
 
   &--active &__core {
