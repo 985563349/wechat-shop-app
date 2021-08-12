@@ -3,7 +3,7 @@ import { View } from '@tarojs/components';
 import classNames from 'classnames';
 
 import { getPrefixCls } from '../utils';
-import { rowContext } from '../row';
+import { rowContext } from '../Row';
 
 import './index.scss';
 

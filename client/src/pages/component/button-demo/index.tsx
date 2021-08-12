@@ -5,7 +5,7 @@ import './index.scss';
 
 const ButtonDemo: React.FC = () => {
   return (
-    <View className='button-demo'>
+    <View className='demo button-demo'>
       <View className='section'>
         <View className='title'>按钮类型</View>
 
@@ -45,10 +45,7 @@ const ButtonDemo: React.FC = () => {
         <View className='title'>镂空按钮</View>
 
         <Button icon={<Icon icon='add' />} circle plain></Button>
-        <Button type='primary' icon={<Icon icon='add' />} circle plain></Button>
         <Button type='danger' icon={<Icon icon='add' />} circle plain disabled></Button>
-        <Button type='success' icon={<Icon icon='add' />} circle plain></Button>
-        <Button type='warning' icon={<Icon icon='add' />} circle plain></Button>
       </View>
 
       <View className='section'>

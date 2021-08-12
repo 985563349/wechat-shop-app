@@ -2,7 +2,7 @@ import { View, Text } from '@tarojs/components';
 import classNames from 'classnames';
 
 import { getPrefixCls } from '../utils';
-import CellGroup from './cell-group';
+import CellGroup from '../CellGroup';
 
 import './index.scss';
 

@@ -5,7 +5,7 @@ import './index.scss';
 
 const CellDemo: React.FC = () => {
   return (
-    <View className='cell-demo'>
+    <View className='demo cell-demo'>
       <View className='section'>
         <View className='title'>Cell</View>
 

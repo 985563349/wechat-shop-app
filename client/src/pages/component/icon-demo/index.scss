@@ -1,16 +1,72 @@
 .icon-demo {
-  padding: 0 32px;
-  overflow: hidden;
   min-height: 100vh;
   background-color: #f6f7f9;
-}
 
-.section {
-  margin-bottom: 40px;
+  .tabs {
+    &-nav {
+      display: flex;
+      height: 88px;
+      background-color: #fff;
 
-  .title {
-    margin: 40px 0;
-    font-size: 28px;
-    color: #495060;
+      .tab {
+        position: relative;
+        flex: 1;
+        display: flex;
+        font-size: 28px;
+        align-items: center;
+        justify-content: center;
+        color: #172239;
+
+        &::after {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          display: none;
+          content: '';
+          width: 50%;
+          border: 1px solid #52c3ff;
+          border-radius: 2px;
+        }
+
+        &--active {
+          font-weight: 500;
+          color: #52c3ff;
+
+          &::after {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &-content {
+      overflow: hidden;
+    }
+
+    .tab-pane {
+      margin: 40px;
+      padding: 40px;
+      color: #8d8d95;
+      background-color: #fff;
+      border-radius: 24px;
+    }
+
+    .section {
+      .title {
+        font-size: 28px;
+        color: #495060;
+      }
+    }
+
+    .c-col {
+      text-align: center;
+      font-size: 24px;
+
+      .c-icon {
+        display: block;
+        margin: 40px 0;
+      }
+    }
   }
 }

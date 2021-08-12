@@ -5,7 +5,7 @@ import './index.scss';
 
 const SwitchDemo: React.FC = () => {
   return (
-    <View className='switch-demo'>
+    <View className='demo switch-demo'>
       <View className='section'>
         <View className='title'>基础用法</View>
         <Switch />
