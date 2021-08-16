@@ -1,34 +1,39 @@
 import { View } from '@tarojs/components';
-import { Checkbox, CheckboxGroup } from '@/components';
-import React, { useState, ReactText } from 'react';
+import { Checkbox } from '@/components';
+import React, { useState } from 'react';
 import './index.scss';
 
 const CheckboxDemo: React.FC = () => {
-  const [type, setType] = useState('');
   const [name, setName] = useState('');
+  const [school, setSchool] = useState('');
 
-  const [cities, setCity] = useState<string[]>(['1']);
+  const [lang, setLang] = useState<string[]>(['1', '3']);
   const clickItem = (value: string[]) => {
-    setCity([...value]);
-    // setType(value)
-    // setType(value)
+    setLang([...value]);
   };
   const onChange = (value: string) => {
     setName(value);
   };
+  const changeSchool = (value: string) => {
+    setSchool(value);
+  };
   return (
     <View className='checkbox-demo'>
       <View className='section'>
-        <View className='title'>基础用法</View>
-        <CheckboxGroup name='lang' value={cities} onClick={clickItem}>
+        <View className='title'>组合用法</View>
+        <Checkbox.Group name='lang' value={lang} onClick={clickItem}>
           <Checkbox value='1'>JAVA</Checkbox>
           <Checkbox value='2'>CSS</Checkbox>
           <Checkbox value='3'>HTML</Checkbox>
           <Checkbox value='4'>REACT</Checkbox>
-        </CheckboxGroup>
-        {/* </Checkbox.Group> */}
+        </Checkbox.Group>
+        <View className='title'>基础用法</View>
         <Checkbox value={name} onClick={onChange} name='person'>
           大人
+        </Checkbox>
+        <View className='title'>disabled</View>
+        <Checkbox value={school} onClick={changeSchool} disabled name='person'>
+          大学
         </Checkbox>
       </View>
     </View>

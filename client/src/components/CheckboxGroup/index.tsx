@@ -1,4 +1,5 @@
 import React, { createContext } from 'react';
+import { View } from '@tarojs/components';
 
 export interface CheckboxGroupTypes {
   name?: string;
@@ -20,8 +21,8 @@ export const CheckboxGroup: React.FC<CheckboxGroupTypes> = (props) => {
     },
   };
   return (
-    <div className='c-checkbox-group'>
+    <View className='c-checkbox-group'>
       <CheckboxGroupContext.Provider value={values}>{children}</CheckboxGroupContext.Provider>
-    </div>
+    </View>
   );
 };

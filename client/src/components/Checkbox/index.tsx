@@ -1,70 +1,67 @@
-import { View, Label } from '@tarojs/components';
+import { View } from '@tarojs/components';
+import classNames from 'classnames';
 import React, { useContext } from 'react';
-import type { ITouchEvent } from '@tarojs/components';
-
-import { CheckboxGroupContext } from '../CheckboxGroup';
-// import classNames from 'classnames';
+import { CheckboxGroupContext, CheckboxGroup } from '../CheckboxGroup';
 import { getPrefixCls } from '../utils';
 import './index.scss';
 
 export interface CheckboxProps {
   name?: string;
   disabled?: boolean;
-  value?: string | number;
-  children: string;
+  value: string | number;
   color?: string;
+  data?: string;
   onClick?: (value: string) => void;
 }
 const prefixCls = getPrefixCls('checkbox');
-const Checkbox: React.FC<CheckboxProps> = (props) => {
+const Checkbox: React.FC<CheckboxProps> & {
+  Group: typeof CheckboxGroup;
+} = (props) => {
   const consumer = useContext(CheckboxGroupContext);
+
   const { name, disabled, value, color, children, onClick } = props;
-  let finalValue = value ?? children;
-  let _idx = -1;
   let checked = false;
+
   if (consumer) {
-    finalValue = value ?? children;
-    _idx = (consumer?.value as (string | number)[]).indexOf(finalValue);
-    checked = _idx > -1;
+    checked = (consumer?.value as (string | number)[]).includes(value);
   } else {
     checked = value ? true : false;
   }
-  // eslint-disable-next-line no-console
+
   const attributes = {
     disabled: disabled ?? consumer?.disabled,
     checked: checked,
     color: color ?? '',
-    value: finalValue,
-    onClick: (e: ITouchEvent) => {
+    value,
+    onClick: () => {
+      if (disabled ?? consumer?.disabled) return;
       if (consumer) {
-        /**
-         * 判断当前是否选择过了
-         */
-        let _value = consumer!.value;
-        _idx = (consumer?.value as (string | number)[]).indexOf(finalValue);
-        if (_idx > -1) {
-          _value.splice(_idx, 1);
+        let consumeValue = consumer!.value;
+        if (checked) {
+          consumeValue = consumeValue.filter((item) => item !== value);
         } else {
-          console.log(e);
-          _value.push(e.target.value);
+          consumeValue.push(value);
         }
-        consumer?._onClick(_value);
+        consumer?._onClick(consumeValue);
       } else {
-        const _val = !checked ? (name ? name : '') : '';
-        // eslint-disable-next-line no-console
-        onClick?.(_val);
+        const checkedVal = !checked ? name ?? '' : '';
+        onClick?.(checkedVal);
       }
     },
   };
+  const classes = classNames(prefixCls, {
+    [`${prefixCls}--checked`]: checked,
+    [`${prefixCls}--disabled`]: attributes.disabled,
+  });
+
   return (
-    <Label className={`${prefixCls}-wrapper`} {...attributes}>
-      <View className={`${prefixCls}  ${checked ? prefixCls + '-checked' : ''}`}>
-        <View className={`${prefixCls}-input`}></View>
+    <View className={`${prefixCls}-wrapper`} {...attributes}>
+      <View className={classes}>
         <View className='inner'></View>
       </View>
       <View className='space'>{children}</View>
-    </Label>
+    </View>
   );
 };
-// Checkbox.Group = CheckboxGroup
+Checkbox.Group = CheckboxGroup;
 export default Checkbox;

@@ -25,7 +25,6 @@ const Component: React.FC = () => {
 
       <View className='section'>
         <View className='section-title'>表单组件</View>
-
         <View className='nav-group'>
           <Navigator className='nav' url='./checkbox-demo/index'>
             Checkbox 复选框
@@ -34,8 +33,32 @@ const Component: React.FC = () => {
           <Navigator className='nav' url='./switch-demo/index'>
             Switch 开关
           </Navigator>
+        </View>
+      </View>
+
+      <View className='section'>
+        <View className='section-title'>Action</View>
+        <View className='nav-group'>
           <Navigator className='nav' url='./overlay-demo/index'>
             遮罩层
+          </Navigator>
+        </View>
+        <View className='nav-group'>
+          <Navigator className='nav' url='./dialog-demo/index'>
+            弹框
+          </Navigator>
+        </View>
+        <View className='nav-group'>
+          <Navigator className='nav' url='./tabs-demo/index'>
+            Tabs
+          </Navigator>
+        </View>
+      </View>
+      <View className='section'>
+        <View className='section-title'>业务组件</View>
+        <View className='nav-group'>
+          <Navigator className='nav' url='./card-demo/index'>
+            商品card
           </Navigator>
         </View>
       </View>

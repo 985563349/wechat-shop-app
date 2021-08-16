@@ -1,3 +1,38 @@
-.space {
-  font-size: 20px;
+@import '../styles/variable.scss';
+$dialog-prefix-cls: #{$class-prefix}-dialog;
+.#{$dialog-prefix-cls} {
+  &__model {
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    border-radius: 10px;
+  }
+
+  &__title {
+    text-align: center;
+    padding: 30px;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    padding: 30px;
+  }
+
+  &__button {
+    width: 200px;
+    font-size: 28px;
+
+    &--confirm {
+      color: #fff;
+      background: $primary-color;
+    }
+  }
 }

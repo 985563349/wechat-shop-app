@@ -1,0 +1,84 @@
+@import '../styles/variable.scss';
+$tabs-prefix-cls: #{$class-prefix}-tabs;
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.#{$tabs-prefix-cls} {
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    height: 88px;
+    box-sizing: content-box;
+    padding-bottom: 15px;
+    align-items: center;
+    // justify-content: center;
+    position: relative;
+    font-size: 28px;
+
+    &--underline {
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      bottom: 15px;
+      height: 3px;
+      background: $primary-color;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+  }
+
+  &--scroll {
+    .#{$tabs-prefix-cls}__item {
+      display: inline-block;
+      overflow: visible;
+    }
+
+    &.#{$tabs-prefix-cls}__header {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      white-space: nowrap;
+    }
+  }
+
+  &__item {
+    flex: 1;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    color: #646566;
+    padding: 0 10px;
+
+    &--text {
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+
+    &--active {
+      color: #323233;
+      font-weight: 500;
+    }
+  }
+
+  &__body {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    will-change: transform, left, top;
+    overflow: visible;
+  }
+}

@@ -1,5 +1,6 @@
 export default {
   pages: [
+    'pages/component/tabs-demo/index',
     'pages/component/index',
     'pages/index/index',
     'pages/user/index',
@@ -9,6 +10,8 @@ export default {
     'pages/component/switch-demo/index',
     'pages/component/overlay-demo/index',
     'pages/component/checkbox-demo/index',
+    'pages/component/card-demo/index',
+    'pages/component/dialog-demo/index',
   ],
   window: {
     backgroundTextStyle: 'light',
